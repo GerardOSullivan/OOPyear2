@@ -1,6 +1,7 @@
 package LabSheetWeek2;
 
 import javax.swing.*;
+import java.util.Arrays;
 
 public class Exercise3 {
     public static void main (String args[])
@@ -17,9 +18,17 @@ public class Exercise3 {
             {
                 longestName= names[i];
             }
+
+            totalCharacters += names[i].length();
         }
 
-        System.out.print(totalCharacters);
+        Arrays.sort(names);
+
+        JOptionPane.showMessageDialog(null,"The longest name is " +longestName +
+                "\n\nAverage characters per name is " + String.format("%.0f",(double)(totalCharacters/names.length)) +
+                "\n\nThe array sorted in ascending order is: " + Arrays.toString(names),"Results",JOptionPane.INFORMATION_MESSAGE);
+
+        System.exit(0);
 
 
     }
