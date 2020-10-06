@@ -24,7 +24,7 @@ public class Computer {
         this.price= price;
     }
 
-    String getManufacturer() {
+    public String getManufacturer() {
         return manufacturer;
     }
 

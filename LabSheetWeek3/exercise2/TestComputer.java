@@ -1,6 +1,6 @@
 package LabSheetWeek3.exercise2;
 
-import LabSheetWeek3.exercise1.Computer;
+import LabSheetWeek3.exercise2.Computer;
 
 import javax.swing.*;
 
@@ -8,7 +8,7 @@ public class TestComputer {
     public static void main(String[] args) {
         String output = "";
 
-        Computer c1 = new LabSheetWeek3.exercise1.Computer();
+        Computer c1 = new Computer();
 
         output += "Calling the no-argument Computer constructor. " +
                 "The first Computer object details are: \n\n" + c1.toString();
