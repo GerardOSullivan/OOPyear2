@@ -2,7 +2,7 @@ package LabSheetWeek1;
 
 import javax.swing.*;
 
-public class helloOOP {
+public class Exercise1 {
     public static void main(String args[])
     {
         String a ="hello world OOP";

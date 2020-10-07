@@ -1,5 +1,5 @@
 package LabSheetWeek5.exercise2;
-//TestBankAccount.java
+//TestAnimal.java
 /*This program aims to test
     a bank account object using no argument and multi argument constructors
  */
