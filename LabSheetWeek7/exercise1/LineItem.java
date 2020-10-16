@@ -1,4 +1,4 @@
-package LabSheeWeek7.exercise1;
+package LabSheetWeek7.exercise1;
 
 //LineItem.java
 /*A simple instantiable class definition for an line-item which also demonstrates

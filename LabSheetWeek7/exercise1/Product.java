@@ -1,4 +1,4 @@
-package LabSheeWeek7.exercise1;
+package LabSheetWeek7.exercise1;
 
 //Product.java
 /*A simple instantiable class definition for a Product*/

@@ -1,6 +1,6 @@
-package LabSheeWeek7.exercise2;
+package LabSheetWeek7.exercise2;
 
-public class TestCollegeApp2 {
+public class TestCollegeApp {
     public static void main(String[] args) {
 
         //Students list
@@ -35,8 +35,41 @@ public class TestCollegeApp2 {
         //Creating a college object giving it the departments
         Institute college = new Institute("Institute of Technology",departments);
 
-        college.getTotalStudents();
-        
+        System.out.println(college);
 
+        System.out.println("\nThe number of students in all departments is " + college.getTotalStudents() +"\n");
+
+
+        for(int i=0;i <departments.length;i++)
+        {
+            if(departments[i] != null)
+            {
+                System.out.println(departments[i].getName() + " " + i);
+            }
+        }
+
+        computingStudents = departments[0].getStudent();
+
+        for(int i=0;i <computingStudents.length;i++)
+        {
+            if(computingStudents[i] != null)
+            {
+                if(computingStudents[i].getId() == 154345)
+                {
+                    System.out.println("\nFound Jake!\n");
+                    creativeMediaStudents[2] = computingStudents[i];
+                    computingStudents[i].setDepartment("Creative Media");
+                    computingStudents[i] = null;
+                    break;
+                }
+                else
+                {
+                    System.out.println("\nCouldn't find Jake\n");
+                }
+            }
+
+        }
+
+        System.out.println(college);
     }
 }

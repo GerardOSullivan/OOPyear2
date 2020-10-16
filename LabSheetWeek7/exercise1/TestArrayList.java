@@ -1,4 +1,4 @@
-package LabSheeWeek7.exercise1;
+package LabSheetWeek7.exercise1;
 
 //TestLineItem.java
 /*A driver (test) class that contains the main() method for

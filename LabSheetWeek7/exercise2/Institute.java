@@ -1,6 +1,4 @@
-package LabSheeWeek7.exercise2;
-
-import java.util.Arrays;
+package LabSheetWeek7.exercise2;
 
 public class Institute {
     private String name;

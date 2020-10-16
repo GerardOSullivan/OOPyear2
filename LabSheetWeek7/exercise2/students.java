@@ -1,4 +1,4 @@
-package LabSheeWeek7.exercise2;
+package LabSheetWeek7.exercise2;
 
 public class students {
     private int id;
