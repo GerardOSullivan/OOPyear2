@@ -1,6 +1,6 @@
-package LabSheet8.exercise1;
+package LabSheet8.exercise2;
 
-public class Car extends Vehicle{
+public class Car extends Vehicle {
     private int maxPassengers;
     private String registrationNumber;
 
@@ -12,7 +12,7 @@ public class Car extends Vehicle{
     public Car(double price,double length,double height,double weight,String manufacturer,String model,int maxPassengers,String registrationNumber){
         super(price, length, height, weight, manufacturer, model);
         this.maxPassengers=maxPassengers;
-        this.registrationNumber=registrationNumber;
+        setRegistrationNumber(registrationNumber);
     }
 
     public void setMaxPassengers(int maxPassengers) {
@@ -20,7 +20,14 @@ public class Car extends Vehicle{
     }
 
     public void setRegistrationNumber(String registrationNumber) {
+        if(Validator.isValidRegistrationNumber(registrationNumber))
+        {
             this.registrationNumber = registrationNumber;
+        }
+        else
+        {
+            this.registrationNumber ="Invalid Registration Number";
+        }
     }
 
     public int getMaxPassengers() {
