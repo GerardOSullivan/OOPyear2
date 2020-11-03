@@ -9,11 +9,7 @@ public class Computer {
 
 
     public Computer() {
-        manufacturer = "Not available";
-        type = "Not available";
-        speed = 0;
-        RAM = 0;
-        price = 0;
+        this("Not available","Not available",0,0,0);
     }
 
     public Computer(String manufacturer, String type, double speed, int RAM, double price) {

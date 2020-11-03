@@ -22,11 +22,11 @@ public class TestBankAccount {
 
         output += "\n\nThe second BankAccount object details are: \n\n" + b2.toString();
 
-        output += "\n\nThe number of Bank Account Objects are: " + b1.getNumber();
+        output += "\n\nThe number of Bank Account Objects are: " + b2.getNumber();
 
         BankAccount b3 = new BankAccount();
 
-        System.out.println(b3.toString());
+        System.out.println(b1.toString());
 
         JOptionPane.showMessageDialog(null,output,"BankAccount Object Data",JOptionPane.INFORMATION_MESSAGE);
 

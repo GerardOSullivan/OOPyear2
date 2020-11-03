@@ -2,23 +2,24 @@ package LabSheet5.exercise3;
 
 public class BankAccount {
     private String owner;
-    private static int number;
+    private int number;
     private static double interestRate;
+    private static int count=0;
 
     public BankAccount()
     {
         owner="Owner not Available";
         interestRate=0;
         incrementAccountNumber();
-        setNumber(this.number);
+        setNumber(count);
     }
 
-    public BankAccount(String owner,int number,double interestRate)
+    public BankAccount(String owner,int userNumber,double interestRate)
     {
         this.owner=owner;
         this.interestRate=interestRate;
         incrementAccountNumber();
-        setNumber(this.number);
+        setNumber(count);
 
     }
 
@@ -44,7 +45,7 @@ public class BankAccount {
         BankAccount.interestRate = interestRate;
     }
 
-    private static void incrementAccountNumber() { number++; }
+    private static void incrementAccountNumber() { count++; }
 
     @Override
     public String toString() {
