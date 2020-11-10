@@ -1,5 +1,8 @@
 package LabSheet10.exercise1;
 
+import java.text.SimpleDateFormat;
+import java.util.Arrays;
+import java.util.Date;
 import java.util.GregorianCalendar;
 
 public abstract class Lecturer implements Person{
@@ -71,5 +74,40 @@ public abstract class Lecturer implements Person{
         return dateOfAppointment;
     }
 
+    public abstract String getStatus();
 
+    public abstract int getPointOnScale();
+
+    @Override
+    public String toString() {
+        String str= "Lecturer name is " + getName() +
+                "\nLecturer address is " + getAddress() +
+                "\nLecturer date of birth is ";
+
+        SimpleDateFormat formatDate = new SimpleDateFormat("dd-MM-yyyy");
+        if(getDateOfBirth()!=null)
+        {
+            //Need to get the date of birth as a Date for display purposes.
+            //The toString() method from the GregorianCalendar class inherits
+            //that from its superclass Calendar but this only displays the
+            //calendar data in a non-friendly format like the default
+            //toString() from the Object class
+
+            Date dob = getDateOfBirth().getTime();
+
+            String strDob = formatDate.format(dob);
+            str+=strDob;
+
+        }
+        else
+            str+="Undefined";
+
+        str+="\nLecturer Staff ID is " + getStaffID() +
+                "\nLecturer Courses Taught are " + Arrays.toString(getCoursesTaught()) +
+                "\nLecturer Date of Appointment is " + formatDate.format(getDateOfAppointment().getTime()) +
+                "\nLecturer Status is " + getStatus() +
+                "\nLecturer Point on Scale is " + getPointOnScale();
+
+        return str;
+    }
 }
