@@ -6,6 +6,7 @@ import java.util.Arrays;
 
 public class TestArraylist2 {
     public static void main(String[] args) {
+        int userInputAsInt=0;
     // Create Products
         Product p1 = new Product(1, "Red Pen", "This is a red pen");
         Product p2 = new Product(2, "Pencil", "This is a pencil");
@@ -40,11 +41,11 @@ public class TestArraylist2 {
             {
                 if(Character.isDigit(userInput.charAt(0)))
                 {
-                    int userInputAsInt = Integer.parseInt(userInput);
+                    userInputAsInt = Integer.parseInt(userInput);
 
                     if(userInputAsInt >=1 && userInputAsInt<=5)
                     {
-
+                        valid=true;
                     }
                     else
                     {
@@ -63,6 +64,39 @@ public class TestArraylist2 {
 
         }
 
+        switch (userInputAsInt)
+        {
+            case 1:{
+                addProduct(allProducts);
+                break;
+            }
+            case 2:{
 
+            }
+            case 3:{
+
+            }
+            case 4:{
+
+            }
+            case 5:{
+
+            }
+        }
+
+    }
+    public static void addProduct( ArrayList<Product> allProducts)
+    {
+        String addProductID = JOptionPane.showInputDialog("Please enter the product id");
+        String productName = JOptionPane.showInputDialog("Please enter the product id");
+        String productDescription = JOptionPane.showInputDialog("Please enter the product id");
+
+        int addProductIDAsInt = Integer.parseInt(addProductID);
+
+        Product p = new Product(addProductIDAsInt,productName,productDescription);
+
+        allProducts.add(p);
+
+        JOptionPane.showMessageDialog(null,"Product now created and added to array list!", "Product Added",JOptionPane.INFORMATION_MESSAGE);
     }
 }
